@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Ma page d'accueil{% endblock %}
+{% block content %}
+
+<img src="{% static 'blog/crepes.jpg' %}" alt="Mon image" />
+    <h2>Bienvenue !</h2>
+    <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus
+       massa non tortor. Vestibulum diam diam, posuere in viverra in,
+       ullamcorper et libero. Donec eget libero quis risus congue imperdiet ac
+       id lectus. Nam euismod cursus arcu, et consequat libero ullamcorper sit
+       amet.
+    </p>
+<a href="{% url "afficher_article" 425 %}">
+    Lien vers mon super article N° 42
+</a>
+</br>
+<a href="/blog/article/42">
+    Lien vers mon super article n° 42
+</a>
+</br>
+<a href="{% url "afficher_article" 582 %}">
+    Lien vers mon super article n° {{ ID_article }}
+</a>
+<!-- Ce commentaire HTML sera visible dans le code source. -->
+{# Ce commentaire Django ne sera pas visible dans le code source. #}
+
+{% comment %}
+    Ceci est une page d'exemple. Elle est composée de 3 tableaux :
+    - tableau des ventes
+    - locations
+    - retours en garantie
+{% endcomment %}
+
+{% endblock %}
+
+
+
+
+<!--<h1>Ma super calculatrice</h1>-->
+<!--<p>{{ nombre1 }} + {{ nombre2 }}, ça fait <strong>{{ total }}</strong> !<br />-->
+<!--Nous pouvons également calculer la somme dans le template : {{ nombre1|add:nombre2 }}.</p>-->
+
+
+<!--Les couleurs de l'arc-en-ciel sont :-->
+
+<!--<ul>-->
+<!--{% for code, nom in couleurs.items %}-->
+    <!--<li style="color: #{{ code }}">{{ nom }}</li>-->
+    <!--{% empty %}-->
+    <!--<p class="empty">Pas de couleurs pour le moment.</p>-->
+<!--{% endfor %}-->
+<!--</ul>-->

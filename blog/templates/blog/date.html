@@ -1,0 +1,16 @@
+<h1>Bienvenue sur mon blog</h1>
+<p>La date actuelle est : {{ date }}</p>
+{% if age > 25 %}
+    Bienvenue Monsieur, passez un excellent moment dans nos locaux.
+{% elif age > 16 %}
+    Vas-y, tu peux passer.
+{% else %}
+    Tu ne peux pas rentrer petit, tu es trop jeune !
+{% endif %}
+Les couleurs de l'arc-en-ciel sont :
+
+
+
+Bienvenue {{ pseudo|default:"visiteur $$" }}</br>
+
+Il y a {{ nb_chevaux }} chev{{ nb_chevaux|pluralize:"al,aux" }} dans l'écurie.
